@@ -1,8 +1,18 @@
 package main
 
-import "ruggger.com/trie/internal/trie"
+import (
+	"fmt"
+
+	"github.com/rugggger/go-search/internal/trie"
+)
 
 func main() {
-	trie.Search()
+	dictionary := trie.NewTrie()
+	dictionary.Insert("ap")
+	dictionary.Insert("apple")
+	println("---")
+
+	fmt.Println(dictionary.Exists("ap"))
+	fmt.Println(dictionary.Exists("apple"))
 
 }
